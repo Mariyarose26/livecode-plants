@@ -11,6 +11,11 @@ class PlantsController < ApplicationController
     end
   end
 
+  # GET /plants/1
+  def show
+    @plant = Plant.find(params[:id])
+  end
+
   def destroy
     @plant = Plant.find(params[:id])
     @plant.destroy

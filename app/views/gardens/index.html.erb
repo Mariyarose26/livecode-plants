@@ -1,29 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Gardens</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Banner url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <h1>Gardens</h1>
+  <div class="d-flex">
     <% @gardens.each do |garden| %>
-      <tr>
-        <td><%= garden.name %></td>
-        <td><%= garden.banner_url %></td>
-        <td><%= link_to 'Show', garden %></td>
-        <td><%= link_to 'Edit', edit_garden_path(garden) %></td>
-        <td><%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card">
+        <%= image_tag garden.banner_url, alt: "Garden", width: "100%" %>
+        <div class="px-1">
+          <h4><%= garden.name %></h4>
+          <p><%= link_to 'Show', garden %>
+          <%= link_to 'Edit', edit_garden_path(garden) %>
+          <%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Garden', new_garden_path %>
+  </div>
+  <br/>
+  <%= link_to 'New Garden', new_garden_path %>
+</div>
