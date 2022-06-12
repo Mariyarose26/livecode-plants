@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app with gardens, plants and tags
 
-Things you may want to cover:
+**Setup**
 
-* Ruby version
+Make sure you run `bundle install` and `yarn` and then run `rails db:create db:migrate db:seed` in you terminal.
 
-* System dependencies
+Navigate to: http://localhost:3000/gardens
 
-* Configuration
+![image](https://user-images.githubusercontent.com/84695439/173211813-fe3dd690-40a2-48ae-957d-255e8d1540d5.png)
 
-* Database creation
 
-* Database initialization
+***We are using Stimulus***
 
-* How to run the test suite
+If stimulus isn't setup correctly run `rails webpacker:install:stimulus` to install it.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
